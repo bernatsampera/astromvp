@@ -1,4 +1,4 @@
-import { I18N } from 'astrofast:config';
+import { I18N } from 'astromvp:config';
 
 export const formatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(I18N?.language, {
   year: 'numeric',

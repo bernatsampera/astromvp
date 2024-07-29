@@ -1,4 +1,4 @@
-declare module 'astrofast:config' {
+declare module 'astromvp:config' {
   import type { SiteConfig, I18NConfig, MetaDataConfig, UIConfig, AnalyticsConfig } from './config';
 
   export const SITE: SiteConfig;

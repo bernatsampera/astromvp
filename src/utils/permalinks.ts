@@ -1,6 +1,6 @@
 import slugify from 'limax';
 
-import { SITE } from 'astrofast:config';
+import { SITE } from 'astromvp:config';
 
 import { trim } from '~/utils/utils';
 

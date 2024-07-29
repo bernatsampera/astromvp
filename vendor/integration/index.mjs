@@ -7,7 +7,7 @@ import loadConfig from './utils/loadConfig';
 export default ({ config: _themeConfig = 'src/config.yaml' } = {}) => {
   let cfg;
   return {
-    name: 'astrofast-integration',
+    name: 'astromvp-integration',
 
     hooks: {
       'astro:config:setup': async ({
@@ -19,9 +19,9 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}) => {
         updateConfig,
         addWatchFile,
       }) => {
-        const buildLogger = logger.fork('astrofast');
+        const buildLogger = logger.fork('astromvp');
 
-        const virtualModuleId = 'astrofast:config';
+        const virtualModuleId = 'astromvp:config';
         const resolvedVirtualModuleId = '\0' + virtualModuleId;
 
         const rawJsonConfig = await loadConfig(_themeConfig);
@@ -36,7 +36,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}) => {
           vite: {
             plugins: [
               {
-                name: 'vite-plugin-astrofast-config',
+                name: 'vite-plugin-astromvp-config',
                 resolveId(id) {
                   if (id === virtualModuleId) {
                     return resolvedVirtualModuleId;
@@ -61,9 +61,9 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}) => {
         if (typeof _themeConfig === 'string') {
           addWatchFile(new URL(_themeConfig, config.root));
 
-          buildLogger.info(`astrofast \`${_themeConfig}\` has been loaded.`);
+          buildLogger.info(`astromvp \`${_themeConfig}\` has been loaded.`);
         } else {
-          buildLogger.info(`astrofast config has been loaded.`);
+          buildLogger.info(`astromvp config has been loaded.`);
         }
       },
       'astro:config:done': async ({ config }) => {
@@ -71,7 +71,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}) => {
       },
 
       'astro:build:done': async ({ logger }) => {
-        const buildLogger = logger.fork('astrofast');
+        const buildLogger = logger.fork('astromvp');
         buildLogger.info('Updating `robots.txt` with `sitemap-index.xml` ...');
 
         try {
