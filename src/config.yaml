@@ -1,0 +1,40 @@
+site:
+  name: astrofast
+  site: 'https://astrofast.vercel.app'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+
+# Default SEO metadata
+metadata:
+  title:
+    default: astrofast
+    template: '%s — astrofast'
+  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages..."
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: astrofast
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: '@bernatsampera'
+    site: '@bernatsampera'
+    cardType: summary_large_image
+
+i18n:
+  language: en
+  textDirection: ltr
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
