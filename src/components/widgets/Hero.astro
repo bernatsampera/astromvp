@@ -3,7 +3,7 @@ import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
 import Background from '~/components/ui/Background.astro';
 
-import type { Hero as Props } from '~/types';
+import type {Hero as Props} from '~/types';
 
 const {
   title = await Astro.slots.render('title'),
@@ -19,7 +19,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
+<section class="relative md:-mt-[76px] not-prose" {...id ? {id} : {}}>
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
     <slot name="bg">
       {bg ? <Fragment set:html={bg} /> : null}
