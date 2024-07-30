@@ -3,12 +3,12 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 
 import {headerData} from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const metadata = {
   title: 'Landing Page',
@@ -40,23 +40,22 @@ const metadata = {
   <Hero2
     tagline="SaaS Web Demo"
     actions={[
-      {variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/basmpera/astromvp'},
-      {text: 'Learn more', href: '#features'},
+      {variant: 'secondary', target: '_blank', text: 'Get Started', href: 'https://github.com/basmpera/astromvp'},
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'astromvp Hero Image',
+      src: 'https://dashboard-dh2.pages.dev/assets/logo-45cf4a2a.webp',
+      alt: 'AstroMvp Hero Image',
     }}
   >
     <Fragment slot="title">
-      Simplify web design with astromvp: <br /> your ultimate <span class="text-accent dark:text-white highlight"
+      Simplify web design with AstroMvp: <br /> your ultimate <span class="text-accent dark:text-white highlight"
         >SaaS</span
       > companion<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Elevate your website creation process with <span class="font-semibold">astromvp</span>'s SaaS solutions.</span
+        Elevate your website creation process with <span class="font-semibold">AstroMvp</span>'s SaaS solutions.</span
       >
       Seamlessly blend the power of Astro 4.0 and Tailwind CSS to craft websites that resonate with your brand and audience.
     </Fragment>
@@ -67,7 +66,7 @@ const metadata = {
   <Features2
     id="features"
     tagline="Features"
-    title="What you get with astromvp"
+    title="What you get with AstroMvp"
     subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
     items={[
       {
@@ -106,6 +105,7 @@ const metadata = {
   <!-- Pricing  -->
 
   <Pricing
+    id="pricing"
     title="Our prices"
     subtitle="Only pay for what you need"
     prices={[
@@ -196,26 +196,27 @@ const metadata = {
 
   <FAQs
     title="Frequently Asked Questions"
+    id="faq"
     items={[
       {
-        title: 'Is astromvp compatible with the latest versions of Astro and Tailwind CSS?',
+        title: 'Is AstroMvp compatible with the latest versions of Astro and Tailwind CSS?',
         description:
-          'Yes, astromvp is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by astromvp.',
+          'Yes, AstroMvp is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroMvp.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Can I use astromvp for both personal and commercial projects?',
-        description: `Certainly! astromvp is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, astromvp has you covered.`,
+        title: 'Can I use AstroMvp for both personal and commercial projects?',
+        description: `Certainly! AstroMvp is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroMvp has you covered.`,
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'What level of coding knowledge is required to use astromvp?',
+        title: 'What level of coding knowledge is required to use AstroMvp?',
         description:
-          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, astromvp offers extensive customization capabilities.',
+          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroMvp offers extensive customization capabilities.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Is customer support available for astromvp users seeking guidance?',
+        title: 'Is customer support available for AstroMvp users seeking guidance?',
         description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
         icon: 'tabler:chevrons-right',
       },
@@ -228,29 +229,5 @@ const metadata = {
 
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
-    title="Reach out to us"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
-    callToAction={{
-      text: 'Contact us',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Email us',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Call us',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Follow us',
-        description: '@example',
-        icon: 'tabler:brand-twitter',
-      },
-    ]}
-  />
+  <Testimonials />
 </Layout>

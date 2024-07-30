@@ -25,18 +25,12 @@ export const footerData = {
       links: [
         { text: 'Features', href: '/#features' },
         { text: 'Pricing', href: '/#pricing' },
+        { text: 'FAQ', href: '/#faq' },
       ],
     },
     {
       title: 'Company',
-      links: [
-        { text: 'About', href: '/about' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
-      ],
+      links: [{ text: 'About', href: '/about' }],
     },
   ],
   secondaryLinks: [

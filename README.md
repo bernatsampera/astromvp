@@ -1,11 +1,11 @@
-# 🚀 astromvp
+# 🚀 AstroMvp
 
-<img src="https://raw.githubusercontent.com/bernatsampera/.github/main/resources/astromvp/lighthouse-score.png" align="right"
-     alt="astromvp Lighthouse Score" width="100" height="358">
+<img src="https://raw.githubusercontent.com/bernatsampera/.github/main/resources/AstroMvp/lighthouse-score.png" align="right"
+     alt="AstroMvp Lighthouse Score" width="100" height="358">
 
 🌟 _Most *starred* & *forked* Astro theme in 2022 & 2023_. 🌟
 
-**astromvp** is a free and open-source template to make your website using **[Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
+**AstroMvp** is a free and open-source template to make your website using **[Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
 
 - ✅ **Production-ready** scores in **PageSpeed Insights** reports.
 - ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
@@ -16,15 +16,15 @@
 
 <br>
 
-<img src="https://raw.githubusercontent.com/bernatsampera/.github/main/resources/astromvp/screenshot-astromvp-1.png" alt="astromvp Theme Screenshot">
+<img src="https://raw.githubusercontent.com/bernatsampera/.github/main/resources/AstroMvp/screenshot-AstroMvp-1.png" alt="AstroMvp Theme Screenshot">
 
 [![bernatsampera](https://custom-icon-badges.demolab.com/badge/made%20by%20-bernatsampera-556bf2?style=flat-square&logo=bernatsampera&logoColor=white&labelColor=101827)](https://bernatsampera.com)
-[![License](https://img.shields.io/github/license/basmpera/astromvp?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/basmpera/astromvp/blob/main/LICENSE.md)
+[![License](https://img.shields.io/github/license/basmpera/AstroMvp?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/basmpera/AstroMvp/blob/main/LICENSE.md)
 [![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/bernatsampera)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/basmpera/astromvp#contributing)
-[![Known Vulnerabilities](https://snyk.io/test/github/basmpera/astromvp/badge.svg?style=flat-square)](https://snyk.io/test/github/basmpera/astromvp)
-[![Stars](https://img.shields.io/github/stars/basmpera/astromvp.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/basmpera/astromvp)
-[![Forks](https://img.shields.io/github/forks/basmpera/astromvp.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/basmpera/astromvp)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/basmpera/AstroMvp#contributing)
+[![Known Vulnerabilities](https://snyk.io/test/github/basmpera/AstroMvp/badge.svg?style=flat-square)](https://snyk.io/test/github/basmpera/AstroMvp)
+[![Stars](https://img.shields.io/github/stars/basmpera/AstroMvp.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/basmpera/AstroMvp)
+[![Forks](https://img.shields.io/github/forks/basmpera/AstroMvp.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/basmpera/AstroMvp)
 
 <br>
 
@@ -32,7 +32,7 @@
 <summary>Table of Contents</summary>
 
 - [Demo](#demo)
-- [Upcoming: astromvp 2.0 – We Need Your Vision!](#-upcoming-astromvp-20--we-need-your-vision)
+- [Upcoming: AstroMvp 2.0 – We Need Your Vision!](#-upcoming-AstroMvp-20--we-need-your-vision)
 - [Getting started](#getting-started)
   - [Project structure](#project-structure)
   - [Commands](#commands)
@@ -50,21 +50,21 @@
 
 ## Demo
 
-📌 [https://astromvp.vercel.app/](https://astromvp.vercel.app/)
+📌 [https://AstroMvp.vercel.app/](https://AstroMvp.vercel.app/)
 
 <br>
 
-## 🔔 Upcoming: astromvp 2.0 – We Need Your Vision!
+## 🔔 Upcoming: AstroMvp 2.0 – We Need Your Vision!
 
-We're embarking on an exciting journey with **astromvp 2.0**, and we want you to be a part of it! We're currently taking the first steps in developing this new version and your insights are invaluable. Join the discussion and share your feedback, ideas, and suggestions to help shape the future of **astromvp**. Let's make **astromvp 2.0** even better, together!
+We're embarking on an exciting journey with **AstroMvp 2.0**, and we want you to be a part of it! We're currently taking the first steps in developing this new version and your insights are invaluable. Join the discussion and share your feedback, ideas, and suggestions to help shape the future of **AstroMvp**. Let's make **AstroMvp 2.0** even better, together!
 
-[Share Your Feedback in Our Discussion!](https://github.com/basmpera/astromvp/discussions/392)
+[Share Your Feedback in Our Discussion!](https://github.com/basmpera/AstroMvp/discussions/392)
 
 <br>
 
 ## Getting started
 
-**astromvp** tries to give you quick access to creating a website using [Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/). It's a free theme which focuses on simplicity, good practices and high performance.
+**AstroMvp** tries to give you quick access to creating a website using [Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/). It's a free theme which focuses on simplicity, good practices and high performance.
 
 Very little vanilla javascript is used only to provide basic functionality so that each developer decides which framework (React, Vue, Svelte, Solid JS...) to use and how to approach their goals.
 
@@ -72,7 +72,7 @@ In this version the template supports all the options in the `output` configurat
 
 ### Project structure
 
-Inside **astromvp** template, you'll see the following folders and files:
+Inside **AstroMvp** template, you'll see the following folders and files:
 
 ```
 /
@@ -127,7 +127,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
 
-[![Edit astromvp on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/basmpera/astromvp/tree/main) [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/basmpera/astromvp) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/basmpera/astromvp)
+[![Edit AstroMvp on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/basmpera/AstroMvp/tree/main) [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/basmpera/AstroMvp) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/basmpera/AstroMvp)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file `README.md`. Update `src/config.yaml` and contents. Have fun!
 
@@ -223,13 +223,13 @@ prefer.
 
 Clone this repository on your own GitHub account and deploy it to Netlify:
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/basmpera/astromvp)
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/basmpera/AstroMvp)
 
 #### Deploy to Vercel
 
 Clone this repository on your own GitHub account and deploy to Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbernatsampera%2Fastromvp)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbernatsampera%2FAstroMvp)
 
 <br>
 
@@ -253,8 +253,8 @@ That would be very useful for all of us and we would be happy to listen and take
 
 ## Acknowledgements
 
-Initially created by [bernatsampera](https://bernatsampera.com) and maintained by a community of [contributors](https://github.com/basmpera/astromvp/graphs/contributors).
+Initially created by [bernatsampera](https://bernatsampera.com) and maintained by a community of [contributors](https://github.com/basmpera/AstroMvp/graphs/contributors).
 
 ## License
 
-**astromvp** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.
+**AstroMvp** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.

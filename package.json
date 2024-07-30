@@ -1,7 +1,7 @@
 {
   "name": "@basmpera/astromvp",
   "version": "1.0.0-beta.39",
-  "description": "astromvp: A free template using Astro 4.0 and Tailwind CSS. Astro starter theme.",
+  "description": "astromvp: An template using Astro 4.0, Tailwind CSS and Daisyui. Astro starter theme.",
   "type": "module",
   "private": true,
   "engines": {
@@ -44,6 +44,7 @@
     "@typescript-eslint/parser": "^7.16.1",
     "astro-compress": "2.2.28",
     "astro-eslint-parser": "^1.0.2",
+    "daisyui": "^4.12.10",
     "eslint": "8.57.0",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-jsx-a11y": "^6.9.0",
