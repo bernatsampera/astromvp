@@ -1,7 +1,7 @@
 ---
-import type { HTMLTag } from 'astro/types';
-import type { Widget } from '~/types';
-import { twMerge } from 'tailwind-merge';
+import type {HTMLTag} from 'astro/types';
+import type {Widget} from '~/types';
+import {twMerge} from 'tailwind-merge';
 import Background from './Background.astro';
 
 export interface Props extends Widget {
@@ -9,12 +9,12 @@ export interface Props extends Widget {
   ['as']?: HTMLTag;
 }
 
-const { id, isDark = false, containerClass = '', bg, as = 'section' } = Astro.props;
+const {id, isDark = false, containerClass = '', bg, as = 'section'} = Astro.props;
 
 const WrapperTag = as;
 ---
 
-<WrapperTag class="relative not-prose scroll-mt-[72px]" {...id ? { id } : {}}>
+<WrapperTag class="relative not-prose scroll-mt-[72px]" {...id ? {id} : {}}>
   <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
     <slot name="bg">
       {bg ? <Fragment set:html={bg} /> : <Background isDark={isDark} />}
@@ -23,7 +23,7 @@ const WrapperTag = as;
   <div
     class:list={[
       twMerge('relative mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default', containerClass),
-      { dark: isDark },
+      {isDark},
     ]}
   >
     <slot />

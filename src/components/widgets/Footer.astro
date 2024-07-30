@@ -26,9 +26,9 @@ export interface Props {
 const {socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light'} = Astro.props;
 ---
 
-<footer class:list={[{dark: theme === 'dark'}, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
+<footer class:list={[{dark: theme === 'dark'}, 'relative border-t  border-slate-800 not-prose']}>
   <div class="bg-base-300 absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 text-slate-300">
     <div class="grid grid-cols-8 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2">
@@ -40,7 +40,7 @@ const {socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme =
               <>
                 {index !== 0 ? ' · ' : ''}
                 <a
-                  class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                  class="hover:text-gray-700 text-gray-400 hover:underline transition duration-150 ease-in-out"
                   href={href}
                   set:html={text}
                 />
@@ -58,7 +58,7 @@ const {socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme =
                 {links.map(({text, href, ariaLabel}) => (
                   <li class="mb-2">
                     <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+                      class="text-muted hover:text-gray-700 hover:underline text-gray-400 transition duration-150 ease-in-out"
                       href={href}
                       aria-label={ariaLabel}
                     >
@@ -79,7 +79,7 @@ const {socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme =
             {socialLinks.map(({ariaLabel, href, text, icon}) => (
               <li>
                 <a
-                  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                  class="text-muted text-gray-400 hover:bg-gray-100 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                   aria-label={ariaLabel}
                   href={href}
                 >
@@ -94,7 +94,7 @@ const {socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme =
         )
       }
 
-      <div class="text-sm mr-4 dark:text-muted">
+      <div class="text-sm mr-4 text-muted">
         <Fragment set:html={footNote} />
       </div>
     </div>
