@@ -1,53 +1,4 @@
-import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
-import type { HTMLAttributes, ImageMetadata } from 'astro/types';
-
-export interface Post {
-  /** A unique ID number that identifies a post. */
-  id: string;
-
-  /** A post’s unique slug – part of the post’s URL based on its name, i.e. a post called “My Sample Page” has a slug “my-sample-page”. */
-  slug: string;
-
-  /**  */
-  permalink: string;
-
-  /**  */
-  publishDate: Date;
-  /**  */
-  updateDate?: Date;
-
-  /**  */
-  title: string;
-  /** Optional summary of post content. */
-  excerpt?: string;
-  /**  */
-  image?: ImageMetadata | string;
-
-  /**  */
-  category?: Taxonomy;
-  /**  */
-  tags?: Taxonomy[];
-  /**  */
-  author?: string;
-
-  /**  */
-  metadata?: MetaData;
-
-  /**  */
-  draft?: boolean;
-
-  /**  */
-  Content?: AstroComponentFactory;
-  content?: string;
-
-  /**  */
-  readingTime?: number;
-}
-
-export interface Taxonomy {
-  slug: string;
-  title: string;
-}
+import type { HTMLAttributes } from 'astro/types';
 
 export interface MetaData {
   title?: string;
@@ -111,26 +62,6 @@ export interface Headline {
   classes?: Record<string, string>;
 }
 
-interface TeamMember {
-  name?: string;
-  job?: string;
-  image?: Image;
-  socials?: Array<Social>;
-  description?: string;
-  classes?: Record<string, string>;
-}
-
-interface Social {
-  icon?: string;
-  href?: string;
-}
-
-export interface Stat {
-  amount?: number | string;
-  title?: string;
-  icon?: string;
-}
-
 export interface Item {
   title?: string;
   description?: string;
@@ -160,25 +91,6 @@ export interface Testimonial {
   image?: string | unknown;
 }
 
-export interface Input {
-  type: HTMLInputTypeAttribute;
-  name: string;
-  label?: string;
-  autocomplete?: string;
-  placeholder?: string;
-}
-
-export interface Textarea {
-  label?: string;
-  name?: string;
-  placeholder?: string;
-  rows?: number;
-}
-
-export interface Disclaimer {
-  label?: string;
-}
-
 // COMPONENTS
 export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
   variant?: 'primary' | 'secondary' | 'tertiary' | 'link';
@@ -194,36 +106,11 @@ export interface ItemGrid {
   defaultIcon?: string;
   classes?: Record<string, string>;
 }
-
-export interface Collapse {
-  iconUp?: string;
-  iconDown?: string;
-  items?: Array<Item>;
-  columns?: number;
-  classes?: Record<string, string>;
-}
-
-export interface Form {
-  inputs?: Array<Input>;
-  textarea?: Textarea;
-  disclaimer?: Disclaimer;
-  button?: string;
-  description?: string;
-}
-
-// WIDGETS
+// Elements
 export interface Hero extends Omit<Headline, 'classes'>, Omit<Element, 'classes'> {
   content?: string;
   actions?: string | CallToAction[];
   image?: string | unknown;
-}
-
-export interface Team extends Omit<Headline, 'classes'>, Element {
-  team?: Array<TeamMember>;
-}
-
-export interface Stats extends Omit<Headline, 'classes'>, Element {
-  stats?: Array<Stat>;
 }
 
 export interface Pricing extends Omit<Headline, 'classes'>, Element {
@@ -280,5 +167,3 @@ export interface Content extends Omit<Headline, 'classes'>, Element {
   isAfterContent?: boolean;
   callToAction?: CallToAction;
 }
-
-export interface Contact extends Omit<Headline, 'classes'>, Form, Element {}
