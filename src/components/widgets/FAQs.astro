@@ -2,7 +2,7 @@
 import Headline from '~/components/ui/Headline.astro';
 import ItemGrid from '~/components/ui/ItemGrid.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import type { Faqs as Props } from '~/types';
+import type {Faqs as Props} from '~/types';
 
 const {
   title = '',
@@ -23,7 +23,7 @@ const {
   <ItemGrid
     items={items}
     columns={columns}
-    defaultIcon="tabler:chevron-right"
+    defaultIcon="tabler:point"
     classes={{
       container: `${columns === 1 ? 'max-w-4xl' : ''} gap-y-8 md:gap-y-12`,
       panel: 'max-w-none',

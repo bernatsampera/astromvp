@@ -2,13 +2,18 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Header from '~/components/widgets/Header.astro';
-import Hero2 from '~/components/widgets/Hero2.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 
 import {headerData} from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Image from '~/components/common/Image.astro';
+
+const dependenciesImg = '~/assets/images/dependencies.webp';
+const landingImg = '~/assets/images/landing.webp';
 
 const metadata = {
   title: 'Landing Page',
@@ -36,21 +41,19 @@ const metadata = {
     <Header {...headerData} isSticky />
   </Fragment>
 
-  <!-- Hero2 Widget ******************* -->
-  <Hero2
-    tagline="SaaS Web Demo"
+  <!-- Hero Widget ******************* -->
+  <Hero
+    tagline="Astro Indie Mvp Template"
     actions={[
       {variant: 'secondary', target: '_blank', text: 'Get Started', href: 'https://github.com/basmpera/astromvp'},
     ]}
     image={{
-      src: '/img/dependencies.webp',
+      src: dependenciesImg,
       alt: 'AstroMvp Hero Image',
     }}
   >
     <Fragment slot="title">
-      Streamline web development with AstroMvp: <br /> your ultimate <span class="text-white highlight">
-        Template
-      </span>
+      MVPs Made Simple: Ship quickly with Minimal Coding Effort
       <br />
     </Fragment>
 
@@ -61,7 +64,33 @@ const metadata = {
       Effortlessly combine the strength of Astro 4.0 and DaisyUI to build websites that align with your brand identity and
       engage your audience.
     </Fragment>
-  </Hero2>
+  </Hero>
+
+  <!-- Steps Widget -->
+
+  <Steps
+    id="steps"
+    items={[
+      {description: 'git clone astro-mvp'},
+      {description: 'cd astro-mvp && npm install'},
+      {description: 'npm run start'},
+    ]}
+    title="Getting Started"
+    subtitle="Start in a moment following this Steps (You need to have npm installed)"
+  >
+    <div class="mockup-window bg-base-300 border">
+      <Image
+        class="mx-auto rounded-md w-full"
+        widths={[400, 768, 1024, 2040]}
+        sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+        loading="eager"
+        width={800}
+        height={450}
+        src={landingImg}
+        alt="Astro Mvp example"
+      />
+    </div>
+  </Steps>
 
   <!-- Features Widget *************** -->
 
@@ -200,28 +229,6 @@ const metadata = {
     title="Frequently Asked Questions"
     id="faq"
     items={[
-      // {
-      //   title: 'Is AstroMvp compatible with the latest versions of Astro and Tailwind CSS?',
-      //   description:
-      //     'Yes, AstroMvp is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroMvp.',
-      //   icon: 'tabler:chevrons-right',
-      // },
-      // {
-      //   title: 'Can I use AstroMvp for both personal and commercial projects?',
-      //   description: `Certainly! AstroMvp is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroMvp has you covered.`,
-      //   icon: 'tabler:chevrons-right',
-      // },
-      // {
-      //   title: 'What level of coding knowledge is required to use AstroMvp?',
-      //   description:
-      //     'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroMvp offers extensive customization capabilities.',
-      //   icon: 'tabler:chevrons-right',
-      // },
-      // {
-      //   title: 'Is customer support available for AstroMvp users seeking guidance?',
-      //   description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
-      //   icon: 'tabler:chevrons-right',
-      // },
       {
         title: 'Is AstroMvp compatible with the latest versions of React and Bootstrap?',
         description:

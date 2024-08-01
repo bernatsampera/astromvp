@@ -1,0 +1,46 @@
+---
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+
+import type {Steps as Props} from '~/types';
+import WidgetWrapper from '../ui/WidgetWrapper.astro';
+import Headline from '../ui/Headline.astro';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+
+  items = [],
+  classes = {},
+
+  id,
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+
+const image = {
+  src: '~/assets/images/dependencies.webp',
+  alt: 'AstroMvp Hero Image',
+};
+---
+
+<WidgetWrapper id={id} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
+  <div class="w-full flex justify-center">
+    <ul class="steps steps-vertical">
+      {
+        items.map((item) => (
+          <li class="step h-40">
+            {' '}
+            <div class="mockup-code">
+              <pre data-prefix="$">
+                <code>{item.description}</code>
+              </pre>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <slot />
+</WidgetWrapper>

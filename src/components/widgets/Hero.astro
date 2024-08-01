@@ -16,6 +16,8 @@ const {
   id,
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+console.log('image', image);
 ---
 
 <section class="relative md:-mt-[76px] not-prose" {...id ? {id} : {}}>
@@ -70,7 +72,7 @@ const {
                   widths={[400, 768, 1024, 2040]}
                   sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
                   loading="eager"
-                  width={600}
+                  width={800}
                   height={600}
                   {...image}
                 />
