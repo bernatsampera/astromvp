@@ -98,7 +98,7 @@ export interface Video {
   type?: string;
 }
 
-export interface Widget {
+export interface Element {
   id?: string;
   isDark?: boolean;
   bg?: string;
@@ -213,35 +213,35 @@ export interface Form {
 }
 
 // WIDGETS
-export interface Hero extends Omit<Headline, 'classes'>, Omit<Widget, 'isDark' | 'classes'> {
+export interface Hero extends Omit<Headline, 'classes'>, Omit<Element, 'isDark' | 'classes'> {
   content?: string;
   actions?: string | CallToAction[];
   image?: string | unknown;
 }
 
-export interface Team extends Omit<Headline, 'classes'>, Widget {
+export interface Team extends Omit<Headline, 'classes'>, Element {
   team?: Array<TeamMember>;
 }
 
-export interface Stats extends Omit<Headline, 'classes'>, Widget {
+export interface Stats extends Omit<Headline, 'classes'>, Element {
   stats?: Array<Stat>;
 }
 
-export interface Pricing extends Omit<Headline, 'classes'>, Widget {
+export interface Pricing extends Omit<Headline, 'classes'>, Element {
   prices?: Array<Price>;
 }
 
-export interface Testimonials extends Omit<Headline, 'classes'>, Widget {
+export interface Testimonials extends Omit<Headline, 'classes'>, Element {
   testimonials?: Array<Testimonial>;
   callToAction?: CallToAction;
 }
 
-export interface Brands extends Omit<Headline, 'classes'>, Widget {
+export interface Brands extends Omit<Headline, 'classes'>, Element {
   icons?: Array<string>;
   images?: Array<Image>;
 }
 
-export interface Features extends Omit<Headline, 'classes'>, Widget {
+export interface Features extends Omit<Headline, 'classes'>, Element {
   image?: string | unknown;
   video?: Video;
   items?: Array<Item>;
@@ -254,14 +254,14 @@ export interface Features extends Omit<Headline, 'classes'>, Widget {
   isAfterContent?: boolean;
 }
 
-export interface Faqs extends Omit<Headline, 'classes'>, Widget {
+export interface Faqs extends Omit<Headline, 'classes'>, Element {
   iconUp?: string;
   iconDown?: string;
   items?: Array<Item>;
   columns?: number;
 }
 
-export interface Steps extends Omit<Headline, 'classes'>, Widget {
+export interface Steps extends Omit<Headline, 'classes'>, Element {
   items: Array<{
     description: string;
     icon?: string;
@@ -272,7 +272,7 @@ export interface Steps extends Omit<Headline, 'classes'>, Widget {
   isReversed?: boolean;
 }
 
-export interface Content extends Omit<Headline, 'classes'>, Widget {
+export interface Content extends Omit<Headline, 'classes'>, Element {
   content?: string;
   image?: string | unknown;
   items?: Array<Item>;
@@ -282,4 +282,4 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   callToAction?: CallToAction;
 }
 
-export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+export interface Contact extends Omit<Headline, 'classes'>, Form, Element {}

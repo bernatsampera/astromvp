@@ -1,15 +1,15 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Header from '~/components/widgets/Header.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Pricing from '~/components/widgets/Pricing.astro';
+import Header from '~/components/elements/Header.astro';
+import Hero from '~/components/elements/Hero.astro';
+import Pricing from '~/components/elements/Pricing.astro';
 
 import {headerData} from '~/navigation';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/elements/FAQs.astro';
+import Features2 from '~/components/elements/Features2.astro';
+import Testimonials from '~/components/elements/Testimonials.astro';
+import Steps from '~/components/elements/Steps.astro';
 import Image from '~/components/common/Image.astro';
 
 const dependenciesImg = '~/assets/images/dependencies.webp';
@@ -41,7 +41,7 @@ const metadata = {
     <Header {...headerData} isSticky />
   </Fragment>
 
-  <!-- Hero Widget ******************* -->
+  <!-- Hero Element ******************* -->
   <Hero
     tagline="Astro Indie Mvp Template"
     actions={[
@@ -66,7 +66,7 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <!-- Steps Widget -->
+  <!-- Steps Element -->
 
   <Steps
     id="steps"
@@ -92,7 +92,7 @@ const metadata = {
     </div>
   </Steps>
 
-  <!-- Features Widget *************** -->
+  <!-- Features Element *************** -->
 
   <Features2
     id="features"
@@ -223,7 +223,7 @@ const metadata = {
     ]}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- FAQs Element ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
@@ -260,7 +260,7 @@ const metadata = {
     </Fragment>
   </FAQs>
 
-  <!-- Steps2 Widget ****************** -->
+  <!-- Steps2 Element ****************** -->
 
   <Testimonials />
 </Layout>

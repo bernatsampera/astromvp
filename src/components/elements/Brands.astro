@@ -4,7 +4,7 @@ import type {Brands as Props} from '~/types';
 
 import Image from '~/components/common/Image.astro';
 import Headline from '~/components/ui/Headline.astro';
-import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import ElementWrapper from '~/components/ui/ElementWrapper.astro';
 const {
   title = '',
   subtitle = '',
@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<ElementWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
   <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24">
@@ -35,4 +35,4 @@ const {
         )
     }
   </div>
-</WidgetWrapper>
+</ElementWrapper>
