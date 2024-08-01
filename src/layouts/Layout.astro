@@ -5,7 +5,6 @@ import {I18N} from 'astromvp:config';
 
 import CommonMeta from '~/components/common/CommonMeta.astro';
 import Favicons from '~/components/Favicons.astro';
-import CustomStyles from '~/components/CustomStyles.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
@@ -25,11 +24,10 @@ const {language, textDirection} = I18N;
 ---
 
 <!doctype html>
-<html lang={language} dir={textDirection} class="2xl:text-[20px]" data-theme="light">
+<html lang={language} dir={textDirection} class="2xl:text-[20px]" data-theme="lofi">
   <head>
     <CommonMeta />
     <Favicons />
-    <CustomStyles />
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />

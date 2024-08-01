@@ -23,6 +23,6 @@ module.exports = {
   plugins: [typographyPlugin, daisyui],
   darkMode: 'class',
   daisyui: {
-    themes: ['light', 'dark', 'dracula'],
+    themes: ['light', 'dark', 'lofi'],
   },
 };

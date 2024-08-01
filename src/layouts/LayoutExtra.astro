@@ -5,8 +5,6 @@ import {I18N} from 'astromvp:config';
 
 import CommonMeta from '~/components/common/CommonMeta.astro';
 import Favicons from '~/components/Favicons.astro';
-import CustomStyles from '~/components/CustomStyles.astro';
-import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
@@ -225,7 +223,7 @@ const {language, textDirection} = I18N;
           </h1>
         </div>
         <div class="mx-auto max-w-screen-md text-center pt-8">
-          <h2 class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-10 md:text-xl sm:text-xs text-gray-400">
+          <h2 class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-10 md:text-xl sm:text-xs text-info-content">
             We can help you launch your AI product to 100+ directories. Increase your domain authority and secure
             valuable backlinks to improve your SEO.
           </h2>
@@ -513,7 +511,7 @@ const {language, textDirection} = I18N;
           <input
             type="text"
             id="search"
-            class="w-full rounded-xl shadow-sm inline-flex relative items-center border border-gray-300 px-4 py-2 text-sm text-gray-700 placeholder:text-gray-400 focus:z-10 focus:outline-none focus:ring-gray-500 md:w-72 pl-10 xs:pl-12"
+            class="w-full rounded-xl shadow-sm inline-flex relative items-center border border-gray-300 px-4 py-2 text-sm text-gray-700 placeholder:text-info-content focus:z-10 focus:outline-none focus:ring-gray-500 md:w-72 pl-10 xs:pl-12"
             placeholder="Search by name"
             name="search"
             value=""
@@ -1553,7 +1551,7 @@ const {language, textDirection} = I18N;
                       <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                         <button
                           disabled=""
-                          class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                          class="relative inline-flex items-center rounded-l-md px-2 py-2 text-info-content ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
                         >
                           <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path
@@ -1564,7 +1562,7 @@ const {language, textDirection} = I18N;
                           <span>Prev</span>
                         </button>
                         <button
-                          class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                          class="relative inline-flex items-center rounded-r-md px-2 py-2 text-info-content ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
                         >
                           <span>Next</span>
                           <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -2001,7 +1999,7 @@ const {language, textDirection} = I18N;
               aria-pressed="true">One time</button
             >
             <button
-              class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out text-slate-500 text-slate-400"
+              class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out text-base-content text-base-content"
               aria-pressed="false">Monthly</button
             >
           </div>
@@ -3868,7 +3866,7 @@ const {language, textDirection} = I18N;
         >
           Boost your app, submit, earn
         </h2>
-        <span class="mt-8 max-w-lg text-center text-xl leading-relaxed text-gray-400"
+        <span class="mt-8 max-w-lg text-center text-xl leading-relaxed text-info-content"
           >Don &#x27;t waste more time, increase your startup online presence now!</span
         >
         <p class="mt-3 rounded border px-3 py-1 shadow">
@@ -3888,7 +3886,7 @@ const {language, textDirection} = I18N;
             ></path>
           </svg>
           <span class="text-accent">50$ off</span>
-          <span class="text-gray-400">- only 10 spots left!</span>
+          <span class="text-info-content">- only 10 spots left!</span>
         </p>
         <div class="mt-12">
           <button class="btn btn-primary group text-white btn-block">
