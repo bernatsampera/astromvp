@@ -1,260 +1,62 @@
-# 🚀 AstroMvp
+# Astro.js MVP Boilerplate
 
-<img src="https://raw.githubusercontent.com/bernatsampera/.github/main/resources/AstroMvp/lighthouse-score.png" align="right"
-     alt="AstroMvp Lighthouse Score" width="100" height="358">
+A quick-start template for creating Minimum Viable Products (MVPs) using Astro.js, Tailwind CSS, and DaisyUI.
 
-🌟 _Most *starred* & *forked* Astro theme in 2022 & 2023_. 🌟
-
-**AstroMvp** is a free and open-source template to make your website using **[Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
-
-- ✅ **Production-ready** scores in **PageSpeed Insights** reports.
-- ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
-- ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
-- ✅ Generation of **project sitemap** based on your routes.
-- ✅ **Open Graph tags** for social media sharing.
-- ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
-
-<br>
-
-<img src="https://raw.githubusercontent.com/bernatsampera/.github/main/resources/AstroMvp/screenshot-AstroMvp-1.png" alt="AstroMvp Theme Screenshot">
-
-[![bernatsampera](https://custom-icon-badges.demolab.com/badge/made%20by%20-bernatsampera-556bf2?style=flat-square&logo=bernatsampera&logoColor=white&labelColor=101827)](https://bernatsampera.com)
-[![License](https://img.shields.io/github/license/basmpera/AstroMvp?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/basmpera/AstroMvp/blob/main/LICENSE.md)
-[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/bernatsampera)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/basmpera/AstroMvp#contributing)
-[![Known Vulnerabilities](https://snyk.io/test/github/basmpera/AstroMvp/badge.svg?style=flat-square)](https://snyk.io/test/github/basmpera/AstroMvp)
-[![Stars](https://img.shields.io/github/stars/basmpera/AstroMvp.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/basmpera/AstroMvp)
-[![Forks](https://img.shields.io/github/forks/basmpera/AstroMvp.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/basmpera/AstroMvp)
-
-<br>
-
-<details open>
-<summary>Table of Contents</summary>
-
-- [Demo](#demo)
-- [Upcoming: AstroMvp 2.0 – We Need Your Vision!](#-upcoming-AstroMvp-20--we-need-your-vision)
-- [Getting started](#getting-started)
-  - [Project structure](#project-structure)
-  - [Commands](#commands)
-  - [Configuration](#configuration)
-  - [Deploy](#deploy)
-- [Frequently Asked Questions](#frequently-asked-questions)
-- [Related Projects](#related-projects)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
-
-</details>
-
-<br>
-
-## Demo
-
-📌 [https://AstroMvp.vercel.app/](https://AstroMvp.vercel.app/)
-
-<br>
+## Introduction
 
-## 🔔 Upcoming: AstroMvp 2.0 – We Need Your Vision!
-
-We're embarking on an exciting journey with **AstroMvp 2.0**, and we want you to be a part of it! We're currently taking the first steps in developing this new version and your insights are invaluable. Join the discussion and share your feedback, ideas, and suggestions to help shape the future of **AstroMvp**. Let's make **AstroMvp 2.0** even better, together!
-
-[Share Your Feedback in Our Discussion!](https://github.com/basmpera/AstroMvp/discussions/392)
-
-<br>
-
-## Getting started
-
-**AstroMvp** tries to give you quick access to creating a website using [Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/). It's a free theme which focuses on simplicity, good practices and high performance.
-
-Very little vanilla javascript is used only to provide basic functionality so that each developer decides which framework (React, Vue, Svelte, Solid JS...) to use and how to approach their goals.
-
-In this version the template supports all the options in the `output` configuration, `static`, `hybrid` and `server`.
-
-### Project structure
-
-Inside **AstroMvp** template, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   ├── _headers
-│   └── robots.txt
-├── src/
-│   ├── assets/
-│   │   ├── favicons/
-│   │   ├── images/
-│   │   └── styles/
-│   │       └── tailwind.css
-│   ├── components/
-│   │   ├── common/
-│   │   ├── ui/
-│   │   ├── widgets/
-│   │   │   ├── Header.astro
-│   │   │   └── ...
-│   │   ├── CustomStyles.astro
-│   │   ├── Favicons.astro
-│   │   └── Logo.astro
-│   ├── content/
-│   │   ├── post/
-│   │   │   ├── post-slug-1.md
-│   │   │   ├── post-slug-2.mdx
-│   │   │   └── ...
-│   │   └-- config.ts
-│   ├── layouts/
-│   │   ├── Layout.astro
-│   │   ├── MarkdownLayout.astro
-│   │   └── PageLayout.astro
-│   ├── pages/
-│   │   │   ├── [category]/
-│   │   │   ├── [tag]/
-│   │   │   ├── [...page].astro
-│   │   │   └── index.astro
-│   │   ├── index.astro
-│   │   ├── 404.astro
-│   │   ├-- rss.xml.ts
-│   │   └── ...
-│   ├── utils/
-│   ├── config.yaml
-│   └── navigation.js
-├── package.json
-├── astro.config.mjs
-└── ...
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
-
-[![Edit AstroMvp on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/basmpera/AstroMvp/tree/main) [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/basmpera/AstroMvp) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/basmpera/AstroMvp)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file `README.md`. Update `src/config.yaml` and contents. Have fun!
+This boilerplate provides a solid foundation for rapidly developing MVPs using modern web technologies. It combines the power of Astro.js for fast, content-focused websites with the utility-first approach of Tailwind CSS and the pre-built components of DaisyUI.
 
-<br>
+## Benefits
 
-### Commands
+- **Fast Development**: Get your MVP up and running quickly with pre-configured tools and components.
+- **Performance**: Leverage Astro.js's partial hydration for optimal loading speeds.
+- **Responsive Design**: Utilize Tailwind CSS for easy, responsive layouts.
+- **Beautiful UI**: Access a wide range of customizable components with DaisyUI.
+- **SEO-Friendly**: Take advantage of Astro.js's static site generation capabilities.
+- **Easy Deployment**: Simple setup for deploying to Netlify.
 
-All commands are run from the root of the project, from a terminal:
+## Getting Started
 
-| Command               | Action                                             |
-| :-------------------- | :------------------------------------------------- |
-| `npm install`         | Installs dependencies                              |
-| `npm run dev`         | Starts local dev server at `localhost:3000`        |
-| `npm run build`       | Build your production site to `./dist/`            |
-| `npm run preview`     | Preview your build locally, before deploying       |
-| `npm run format`      | Format codes with Prettier                         |
-| `npm run lint:eslint` | Run Eslint                                         |
-| `npm run astro ...`   | Run CLI commands like `astro add`, `astro preview` |
+1. Clone the repository:
 
-<br>
+git clone https://github.com/yourusername/astro-mvp-boilerplate.git
+cd astro-mvp-boilerplate
 
-### Configuration
+2. Install dependencies:
 
-Basic configuration file: `./src/config.yaml`
+npm install
 
-```yaml
-site:
-  name: 'Example'
-  site: 'https://example.com'
-  base: '/' # Change this if you need to deploy to Github Pages, for example
-  trailingSlash: false # Generate permalinks with or without "/" at the end
+3. Start the development server:
 
-  googleSiteVerificationId: false # Or some value,
+npm run dev
 
-# Default SEO metadata
-metadata:
-  title:
-    default: 'Example'
-    template: '%s — Example'
-  description: 'This is the default meta description of Example website'
-  robots:
-    index: true
-    follow: true
-  openGraph:
-    site_name: 'Example'
-    images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
-    type: website
-  twitter:
-    handle: '@twitter_user'
-    site: '@twitter_user'
-    cardType: summary_large_image
+4. Open your browser and visit `http://localhost:3000` to see your app.
 
-i18n:
-  language: en
-  textDirection: ltr
+## Deploying to Netlify
 
-analytics:
-  vendors:
-    googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+1. Push your code to a GitHub repository.
 
-ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "only"
-```
+2. Log in to your Netlify account and click "New site from Git".
 
-<br>
+3. Choose your repository and configure the following settings:
 
-#### Customize Design
+- Build command: `npm run build`
+- Publish directory: `dist`
 
-To customize Font families, Colors or more Elements refer to the following files:
+4. Click "Deploy site".
 
-- `src/components/CustomStyles.astro`
-- `src/assets/styles/tailwind.css`
+Your site will be live in minutes!
 
-### Deploy
+## Learn More
 
-#### Deploy to production (manual)
-
-You can create an optimized production build with:
-
-```shell
-npm run build
-```
-
-Now, your website is ready to be deployed. All generated files are located at
-`dist` folder, which you can deploy the folder to any hosting service you
-prefer.
-
-#### Deploy to Netlify
-
-Clone this repository on your own GitHub account and deploy it to Netlify:
-
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/basmpera/AstroMvp)
-
-#### Deploy to Vercel
-
-Clone this repository on your own GitHub account and deploy to Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbernatsampera%2FAstroMvp)
-
-<br>
-
-## Frequently Asked Questions
-
-- Why?
--
--
-
-<br>
-
-## Related projects
-
-- [TailNext](https://tailnext.vercel.app/) - Free template using Next.js 14 and Tailwind CSS with the new App Router.
-- [Qwind](https://qwind.pages.dev/) - Free template to make your website using Qwik + Tailwind CSS.
+- [Astro.js Documentation](https://docs.astro.build)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [DaisyUI Documentation](https://daisyui.com/docs/install)
 
 ## Contributing
 
-If you have any ideas, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.
-That would be very useful for all of us and we would be happy to listen and take action.
-
-## Acknowledgements
-
-Initially created by [bernatsampera](https://bernatsampera.com) and maintained by a community of [contributors](https://github.com/basmpera/AstroMvp/graphs/contributors).
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-**AstroMvp** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.
+This project is open source and available under the [MIT License](LICENSE).
