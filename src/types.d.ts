@@ -100,7 +100,6 @@ export interface Video {
 
 export interface Element {
   id?: string;
-  isDark?: boolean;
   bg?: string;
   classes?: Record<string, string | Record<string, string>>;
 }
@@ -213,7 +212,7 @@ export interface Form {
 }
 
 // WIDGETS
-export interface Hero extends Omit<Headline, 'classes'>, Omit<Element, 'isDark' | 'classes'> {
+export interface Hero extends Omit<Headline, 'classes'>, Omit<Element, 'classes'> {
   content?: string;
   actions?: string | CallToAction[];
   image?: string | unknown;
