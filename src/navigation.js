@@ -46,7 +46,7 @@ export const footerData = {
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/basmpera/astromvp' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/bernatsampera/astromvp' },
   ],
   footNote: `
     Made by <a class="text-blue-600 underline text-muted" href="https://bernatsampera.com/"> bernatsampera</a> · All rights reserved.
