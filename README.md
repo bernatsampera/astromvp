@@ -1,4 +1,4 @@
-# Astro.js MVP Boilerplate 🚀
+# Astro.js MVP Boilerplate 🏎️�
 
 A quick-start template for creating Minimum Viable Products (MVPs) using Astro.js, Tailwind CSS, and DaisyUI.
 
