@@ -14,7 +14,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
-    "lint:eslint": "eslint ."
+    "lint:eslint": "eslint .",
+    "test": "vitest"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.7",
