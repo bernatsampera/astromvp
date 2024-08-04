@@ -25,7 +25,7 @@ function getProgressClass(value) {
     <div class="text-center font-extrabold text-white">N/A</div>
   ) : (
     <progress
-      class={twMerge(`progress w-full bg-opacity-20 bg-base-300`, getProgressClass(value))}
+      class={twMerge(`progress w-full h-3 rounded-full bg-opacity-30 bg-base-300`, getProgressClass(value))}
       value={value ?? 0}
       max="100"
     />
