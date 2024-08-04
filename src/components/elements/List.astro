@@ -1,0 +1,87 @@
+---
+import bjjGyms from '~/data/bjjgyms.json';
+import Image from '../common/Image.astro';
+import ElementWrapper from '../ui/ElementWrapper.astro';
+import type {List as Props} from '~/types';
+import Headline from '../ui/Headline.astro';
+import Progress from '../common/Progress.astro';
+
+const defaultGym = '~/assets/images/default_gym.webp';
+const defaultGym2 = '~/assets/images/default_gym_2.webp';
+const defaultGym3 = '~/assets/images/default_gym_3.webp';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+  id,
+
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+
+const getDefaultImage = (index) => {
+  if (index % 3 === 0) {
+    return defaultGym3;
+  } else if (index % 2 === 0) {
+    return defaultGym2;
+  }
+
+  return defaultGym;
+};
+---
+
+<ElementWrapper id={id} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={''} classes={classes?.headline as Record<string, string>} />
+
+  <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    {
+      bjjGyms.map((gym, index) => (
+        <div class="relative flex flex-col bg-base-200 rounded-box max-w-sm group cursor-zoom-in">
+          <Image
+            class="mx-auto rounded-md w-full"
+            widths={[400, 768, 1024, 2040]}
+            sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+            loading="eager"
+            width={800}
+            height={450}
+            src={getDefaultImage(index)}
+            alt="Astro Mvp example"
+          />
+
+          {/* group-hover:opacity-100 */}
+          {/* <div class="absolute inset-0 bg-black bg-opacity-85 flex items-center justify-between opacity-0 text-nowrap opacity-100 transition-opacity duration-300 rounded-md">
+            <div class="text-white p-5">
+              <p>
+                Overall ⭐️ <progress class="progress progress-success w-48 bg-base-300" value={50} max="100" />
+              </p>
+              <p>
+                No GI / GI <progress class="progress progress-success w-48 bg-base-300" value={50} max="100" />
+              </p>
+              <p class="self-center"> Drop In {Math.random() > 0.5 ? '✅' : '❌❓'} </p>
+            </div>
+          </div> */}
+          {/* <div class=" opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-85  grid grid-cols-2 gap-2 items-center px-5  py-20  text-white  text-nowrap transition-opacity duration-300 rounded-md"> */}
+          <div class=" opacity-0 opacity-100 absolute inset-0 bg-black bg-opacity-85  grid grid-cols-2 gap-2 items-center px-5  py-20  text-white  text-nowrap transition-opacity duration-300 rounded-md">
+            <div>Overall 🏆</div>
+            <Progress value={50} />
+            <div>No GI / GI 🥋 </div>
+            <Progress value={80} />
+            <div>Cost 💰</div>
+            <Progress />
+            <div>Popularity 🔥</div>
+            <Progress value={20} />
+            <div>Drop In 🚪</div>
+            <div class="text-center">{Math.random() > 0.5 ? '✅' : '❌❓'}</div>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-2">
+            <h2 class="font-bold text-xl">{gym.name}</h2>
+            <p class="text-black text-center">{gym.location}</p>
+
+            <span class="text-sm">{gym.rating}</span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</ElementWrapper>

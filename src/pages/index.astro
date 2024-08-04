@@ -11,6 +11,7 @@ import Features2 from '~/components/elements/Features2.astro';
 import Testimonials from '~/components/elements/Testimonials.astro';
 import Steps from '~/components/elements/Steps.astro';
 import Image from '~/components/common/Image.astro';
+import List from '~/components/elements/List.astro';
 
 const dependenciesImg = '~/assets/images/dependencies.webp';
 const landingImg = '~/assets/images/landing.webp';
@@ -40,6 +41,9 @@ const metadata = {
     /> -->
     <Header {...headerData} isSticky />
   </Fragment>
+
+  <!-- List -->
+  <List id="list" title="Find your BJJ Gym" tagline="tagline" subtitle="Explore between thousands of gym schools" />
 
   <!-- Hero Element ******************* -->
   <Hero

@@ -167,3 +167,5 @@ export interface Content extends Omit<Headline, 'classes'>, Element {
   isAfterContent?: boolean;
   callToAction?: CallToAction;
 }
+
+export interface List extends Omit<Headline, 'classes'>, Element {}
