@@ -5,8 +5,14 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": [
+        "src/*"
+      ]
     },
-    "types": ["vitest/globals"]
+    "types": [
+      "vitest/globals"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

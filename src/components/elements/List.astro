@@ -5,9 +5,9 @@ import ElementWrapper from '../ui/ElementWrapper.astro';
 import type {List as Props} from '~/types';
 import Headline from '../ui/Headline.astro';
 import Progress from '../common/Progress.astro';
-import Search from '../common/Search.astro';
 
 import {calculateCost, calculatePopularity, calculateRating, getOverallGymRanking} from '~/helpers/calculateRankings';
+import Search from '../client/Search';
 
 const defaultGym = '~/assets/images/default_gym.webp';
 const defaultGym2 = '~/assets/images/default_gym_2.webp';
@@ -37,7 +37,7 @@ const getDefaultImage = (index) => {
 <ElementWrapper id={id} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={''} classes={classes?.headline as Record<string, string>} />
 
-  <Search client:idle />
+  <Search client:only="React" />
   <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {
       bjjGyms.map((gym, index) => {
