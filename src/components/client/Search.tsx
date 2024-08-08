@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { filter, fromEvent, merge, tap } from 'rxjs';
+import React, { useEffect, useState, type ChangeEvent, type SyntheticEvent } from 'react';
+import { debounceTime, filter, fromEvent, merge, skipWhile, tap, throttle, throttleTime } from 'rxjs';
 import { FilterService, type Filter } from '~/services/FilterService';
 
 export default function Search() {
   const [filteredData, setFilteredData] = useState<Filter[]>([]);
   const [showModal, setShowModal] = useState(false);
+
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
   // UseEffect to handle filteredData
   useEffect(() => {
@@ -30,6 +32,23 @@ export default function Search() {
     };
   }, [showModal, setShowModal]);
 
+  useEffect(() => {
+    let subscription;
+    if (inputRef.current) {
+      const input$ = fromEvent<ChangeEvent<HTMLInputElement>>(inputRef.current, 'input').pipe(
+        filter((event) => event.target.value.length > 3),
+        debounceTime(500)
+      );
+
+      subscription = input$.subscribe((event) => {
+        FilterService.searchPlace(event.target.value);
+      });
+    }
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [inputRef.current]);
+
   return (
     <div className="max-w-sm no-prose m-2">
       <label htmlFor="default-search" className="mb-2 text-sm font-medium text-primary sr-only">
@@ -47,6 +66,7 @@ export default function Search() {
           }}
           required
           autoComplete="off"
+          ref={inputRef}
         />
       </div>
       {showModal && (

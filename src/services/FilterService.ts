@@ -27,4 +27,7 @@ export const FilterService = {
     );
     filters$.next(updatedFilters);
   },
+  searchPlace(inputStr: string) {
+    console.log('searching for x', inputStr);
+  },
 };
