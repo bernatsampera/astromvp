@@ -1,5 +1,6 @@
 import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
+import axios from 'axios';
 
 export type Filter = {
   name: string;
@@ -27,7 +28,18 @@ export const FilterService = {
     );
     filters$.next(updatedFilters);
   },
-  searchPlace(inputStr: string) {
+  async searchPlace(inputStr: string) {
     console.log('searching for x', inputStr);
+    const gyms = await axios.get(`/api/gyms?city=${inputStr}`);
+
+    const resultToFilters = gyms.data.map((gym) => ({ name: gym.name, isSelected: false }));
+
+    const currentFilters = filters$.getValue();
+    const currentFiltersName = currentFilters.map((f) => f.name);
+
+    const filterResults = resultToFilters.filter((f) => !currentFiltersName.includes(f.name));
+    console.log('filterResults', filterResults);
+
+    filters$.next([...currentFilters, ...filterResults]);
   },
 };
