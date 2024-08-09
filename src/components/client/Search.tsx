@@ -97,7 +97,7 @@ export default function Search() {
         )}
       </div>
       <div className="flex items-center justify-center gap-4">
-        {filteredData
+        {[...FilterService.baseFilters$.getValue(), ...FilterService.cities$.getValue()]
           .filter((f) => f.isSelected)
           .map((f) => (
             <button
