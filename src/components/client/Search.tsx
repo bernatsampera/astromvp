@@ -1,5 +1,6 @@
 import React, { useEffect, useState, type ChangeEvent, type SyntheticEvent } from 'react';
 import { debounceTime, filter, fromEvent, merge, skipWhile, tap, throttle, throttleTime } from 'rxjs';
+import { twMerge } from 'tailwind-merge';
 import { FilterService, type Filter } from '~/services/FilterService';
 
 export default function Search() {
@@ -20,8 +21,9 @@ export default function Search() {
 
   // UseEffect to Detect click outside modal and close it
   useEffect(() => {
+    let mouseDownSub;
     if (wrapperRef.current) {
-      fromEvent(document, 'mousedown').subscribe((e: Event) => {
+      mouseDownSub = fromEvent(document, 'mousedown').subscribe((e: Event) => {
         if (wrapperRef.current?.contains(e.target as Node)) {
           setShowModal(true);
         } else {
@@ -32,10 +34,11 @@ export default function Search() {
 
     const keyDown$ = fromEvent<KeyboardEvent>(document, 'keydown').pipe(filter(({ key }) => key === 'Escape'));
 
-    const subscription = merge(keyDown$).subscribe(() => setShowModal(false));
+    const keyDownSub = merge(keyDown$).subscribe(() => setShowModal(false));
 
     return () => {
-      subscription.unsubscribe();
+      keyDownSub.unsubscribe();
+      mouseDownSub.unsubscribe();
     };
   }, [showModal, setShowModal]);
 
@@ -77,12 +80,16 @@ export default function Search() {
             ref={inputRef}
           />
         </div>
-        {showModal && (
-          <div className="absolute z-10 p-4 font-bold w-96 bg-base-200 ">
-            <div className="flex flex-col w-fit">
+        {showModal && filteredData.length > 0 && (
+          <div className="absolute z-20 p-4 font-bold  w-[40rem] max-h-96 flex flex-row bg-neutral-content rounded  gap-2">
+            <div className="flex flex-col w-fit flex-wrap gap-1">
               {filteredData.map((f, index) => (
-                <button key={index} className="btn" onClick={() => FilterService.toggleFilter(f)}>
-                  {f.name} {f.isSelected ? '✅' : '❌'}
+                <button
+                  key={index}
+                  className={twMerge('btn btn-outline', f.isSelected ? 'bg-neutral text-neutral-content' : '')}
+                  onClick={() => FilterService.toggleFilter(f)}
+                >
+                  {f.name}
                 </button>
               ))}
             </div>
@@ -90,13 +97,15 @@ export default function Search() {
         )}
       </div>
       <div className="flex items-center justify-center gap-4">
-        {FilterService.filters$
-          .getValue()
+        {filteredData
           .filter((f) => f.isSelected)
           .map((f) => (
-            <button className="btn btn-sm" onClick={() => FilterService.toggleFilter(f)} key={f.name}>
-              {' '}
-              {f.name}{' '}
+            <button
+              className="btn btn-sm btn-neutral rounded"
+              onClick={() => FilterService.toggleFilter(f)}
+              key={f.name}
+            >
+              {f.name}
             </button>
           ))}
       </div>
