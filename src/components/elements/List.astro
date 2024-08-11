@@ -1,17 +1,13 @@
 ---
-import bjjGyms from '~/data/bjjgyms.json';
-import Image from '../common/Image.astro';
 import ElementWrapper from '../ui/ElementWrapper.astro';
 import type {List as Props} from '~/types';
 import Headline from '../ui/Headline.astro';
-import Progress from '../common/Progress.astro';
 
-import {calculateCost, calculatePopularity, calculateRating, getOverallGymRanking} from '~/helpers/calculateRankings';
-import Search from '../client/Search';
+import ListDisplay from '../client/ListDisplay';
 
-const defaultGym = '~/assets/images/default_gym.webp';
-const defaultGym2 = '~/assets/images/default_gym_2.webp';
-const defaultGym3 = '~/assets/images/default_gym_3.webp';
+// const defaultGym = '~/assets/images/default_gym.webp';
+// const defaultGym2 = '~/assets/images/default_gym_2.webp';
+// const defaultGym3 = '~/assets/images/default_gym_3.webp';
 
 const {
   title = await Astro.slots.render('title'),
@@ -22,76 +18,10 @@ const {
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
-
-const getDefaultImage = (index) => {
-  if (index % 3 === 0) {
-    return defaultGym3;
-  } else if (index % 2 === 0) {
-    return defaultGym2;
-  }
-
-  return defaultGym;
-};
 ---
 
 <ElementWrapper id={id} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={''} classes={classes?.headline as Record<string, string>} />
 
-  <Search client:only="React" />
-  <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    {
-      bjjGyms.map((gym, index) => {
-        // Define a helper function to normalize values between 0 and maxScore
-
-        // Calculate normalized scores for each factor
-        const costValue = gym.cost && calculateCost(gym.cost);
-        const popularityValue = calculatePopularity(gym.reviews);
-        const ratingValue = calculateRating(gym.rating);
-
-        return (
-          <div class="relative flex flex-col bg-base-200 rounded-box max-w-sm group cursor-zoom-in">
-            <Image
-              class="mx-auto rounded-md w-full"
-              widths={[400, 768, 1024, 2040]}
-              sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-              loading="eager"
-              width={800}
-              height={450}
-              src={getDefaultImage(index)}
-              alt="Astro Mvp example"
-            />
-
-            {/* group-hover:opacity-100 */}
-            <div class=" opacity-0 group-hover:opacity-100 absolute inset-0 font-bold bg-black bg-opacity-85  grid grid-cols-2 gap-2 items-center px-5  py-10  text-white  text-nowrap transition-opacity duration-300 rounded-md">
-              {/* <div class="opacity-0 opacity-100 absolute inset-0 font-bold bg-black bg-opacity-85  grid grid-cols-2 gap-2 items-center px-5  py-20  text-white  text-nowrap transition-opacity duration-300 rounded-md"> */}
-              <div>🏆 Overall </div>
-              <Progress
-                value={getOverallGymRanking({
-                  costValue,
-                  popularityValue,
-                  ratingValue,
-                  dropIn: gym.dropIn,
-                })}
-              />
-              <div>💰 Cost </div>
-              <Progress />
-              <div>🔥 Popularity </div>
-              <Progress value={popularityValue} />
-              <div>❤️ Liked </div>
-              <Progress value={ratingValue} />
-              <div>🚪 Drop In </div>
-              <div class="text-center">{gym.dropIn ? '✅' : '❓'}</div>
-              <div>🥋 GI / No GI </div>
-              <span> 🥋 🥋 🥋 🤼‍♀️ 🤼‍♀️ </span>
-            </div>
-            <div class="flex flex-col items-center gap-2 p-2">
-              <h2 class="font-bold text-xl">{gym.name}</h2>
-              <p class="text-black text-center">{gym.location}</p>
-              <span>{gym.rating}</span>
-            </div>
-          </div>
-        );
-      })
-    }
-  </div>
+  <ListDisplay client:load />
 </ElementWrapper>
