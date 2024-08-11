@@ -3,7 +3,7 @@ import ElementWrapper from '../ui/ElementWrapper.astro';
 import type {List as Props} from '~/types';
 import Headline from '../ui/Headline.astro';
 
-import ListDisplay from '../client/ListDisplay';
+import ListContainer from '../client/ListContainer';
 
 // const defaultGym = '~/assets/images/default_gym.webp';
 // const defaultGym2 = '~/assets/images/default_gym_2.webp';
@@ -23,5 +23,5 @@ const {
 <ElementWrapper id={id} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={''} classes={classes?.headline as Record<string, string>} />
 
-  <ListDisplay client:load />
+  <ListContainer client:only="react" />
 </ElementWrapper>

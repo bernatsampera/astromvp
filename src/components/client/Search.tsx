@@ -70,7 +70,7 @@ export default function Search() {
         <input
           type="search"
           id="default-search"
-          className="block  input w-full min-w-72 p-4 ps-10 text-md font-bold text-primary border border-gray-300 rounded-lg bg-base-100 focus:ring-4 focus:outline-none focus:ring-primary"
+          className="block  input w-full md:min-w-72  p-4 ps-10 text-md font-bold text-primary border border-gray-300 rounded-lg bg-base-100 focus:ring-4 focus:outline-none focus:ring-primary"
           placeholder="Filter and Search your City"
           onChange={(e) => {
             FilterService.searchSubject$.next(e.target.value);
