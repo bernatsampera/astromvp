@@ -5,6 +5,7 @@ import axios from 'axios';
 export type Filter = {
   name: string;
   isSelected: boolean;
+  cityId?: number;
 };
 
 const searchSubject$ = new BehaviorSubject<string>(''); // Works when BehaviorSubject
@@ -24,8 +25,11 @@ export const FilterService = {
   searchSubject$,
   cities$,
   baseFilters$,
+  activeFilters$: combineLatest([baseFilters$, cities$]).pipe(
+    map(([filters, cities]) => [...filters, ...cities].filter((v) => v.isSelected))
+  ),
   filteredData$: combineLatest([searchSubject$, baseFilters$, cities$]).pipe(
-    tap((v) => console.log('v', v)),
+    // tap((v) => console.log('v', v)),
     map(([searchQuery, filters, cities]) =>
       [...filters, ...cities].filter((x) => x.name.toLowerCase().includes(searchQuery.toLowerCase()))
     )
@@ -47,9 +51,13 @@ export const FilterService = {
 
     baseFilters$.next(updatedFilters);
   },
-  async searchPlace(inputStr: string) {
+  async searchCity(inputStr: string) {
     const cities = await axios.get(`/api/cities?search=${inputStr}`);
-    const resultToFilters = cities.data.map((c) => ({ name: `${c.city}, ${c.country}`, isSelected: false }));
+    const resultToFilters = cities.data.map((c) => ({
+      name: `${c.city}, ${c.country}`,
+      isSelected: false,
+      cityId: c.id,
+    }));
 
     const currentFilters = baseFilters$.getValue();
     const currentFiltersName = currentFilters.map((f) => f.name);
