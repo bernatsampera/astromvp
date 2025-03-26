@@ -24,7 +24,6 @@
 }
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
-  @apply bg-base-300;
   box-shadow: none;
 }
 /* #header.scroll > div:last-child {

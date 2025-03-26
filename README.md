@@ -1,72 +1,72 @@
-# Astro.js MVP Boilerplate 🏎️�
+# AstroMVP - Minimum Viable Product Builder
 
-A quick-start template for creating Minimum Viable Products (MVPs) using Astro.js, Tailwind CSS, and DaisyUI.
+A clean, minimalist Astro starter template designed for quickly building MVP websites. Combines the power of Astro with Tailwind CSS and DaisyUI for a beautiful, functional starting point.
 
-## Introduction 💡
+## Features
 
-This boilerplate provides a solid foundation for rapidly developing MVPs using modern web technologies. It combines the power of Astro.js for fast, content-focused websites with the utility-first approach of Tailwind CSS and the pre-built components of DaisyUI.
+- ⚡️ **Fast Development**: Build your MVP quickly with pre-configured components
+- 🎨 **Clean Design**: Minimalist, modern aesthetics inspired by [ustinov.design](https://ustinov.design/)
+- 🧩 **DaisyUI Components**: Beautiful UI components ready to use
+- 📱 **Fully Responsive**: Looks great on all devices
+- 🌙 **Theme Support**: Clean "Lofi" theme from DaisyUI
+- ⚙️ **TypeScript**: Type safety included
 
-## Benefits ✨
-
-- **Fast Development**: Get your MVP up and running quickly with pre-configured tools and components. ⚡️
-- **Performance**: Leverage Astro.js's partial hydration for optimal loading speeds. 🚢
-- **Responsive Design**: Utilize Tailwind CSS for easy, responsive layouts. 📱
-- **Beautiful UI**: Access a wide range of customizable components with DaisyUI. 🎨
-- **SEO-Friendly**: Take advantage of Astro.js's static site generation capabilities. 🔍
-- **Easy Deployment**: Simple setup for deploying to Netlify. ☁️
-
-## Demo
-
-https://astromvp.vercel.app/
-
-## Getting Started 🏃
-
-1. Clone the repository:
+## Quick Start
 
 ```bash
-git clone https://github.com/bernatsampera/astromvp
+# Clone the repository
+git clone [your-repo-url]
+
+# Navigate to project directory
 cd astromvp
-```
 
-2. Install dependencies:
-
-```bash
+# Install dependencies
 npm install
-```
 
-3. Start the development server:
-
-```bash
+# Start the development server
 npm run dev
 ```
 
-4. Open your browser and visit `http://localhost:3000` to see your app. 👁️
+## Project Structure
 
-## Deploying to Netlify ☁️
+```
+/
+├── src/
+│   ├── assets/           # Static assets like images
+│   ├── components/       # Reusable UI components
+│   │   ├── elements/     # Page section components
+│   │   └── ui/           # Basic UI components (buttons, etc.)
+│   ├── layouts/          # Page layouts
+│   └── pages/            # Pages and endpoints
+└── package.json
+```
 
-1. Push your code to a GitHub repository.
+## Components
 
-2. Log in to your Netlify account and click "New site from Git".
+This starter includes optimized components for building your MVP:
 
-3. Choose your repository and configure the following settings:
+- **Header**: Clean navigation with mobile-responsive dropdown
+- **Footer**: Professional footer with customizable links
+- **Hero**: Impactful landing section for your homepage
+- **Button**: Versatile button component with DaisyUI styling
+- **Pricing**: Simple pricing tables
+- **Features**: Showcase your product's features
+- **Contact**: Convert visitors with a clean contact form
 
-- Build command: `npm run build`
-- Publish directory: `dist`
+## Customization
 
-4. Click "Deploy site". 🎉
+- Choose from DaisyUI themes in `tailwind.config.cjs`
+- Update site details in `src/config.yaml`
+- Modify navigation links in `src/navigation.js`
 
-Your site will be live in minutes!
+## Perfect For
 
-## Learn More 📚
+- Startup MVPs
+- SaaS Products
+- Landing Pages
+- Product Websites
+- Service Businesses
 
-- [Astro.js Documentation](https://docs.astro.build)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [DaisyUI Documentation](https://daisyui.com/docs/install)
+## License
 
-## Contributing 🤝
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License 📜
-
-This project is open source and available under the [MIT License](LICENSE).
+MIT
