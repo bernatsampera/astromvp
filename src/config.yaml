@@ -1,6 +1,6 @@
 site:
-  name: MVPBuilder
-  site: 'https://mvpbuilder.com'
+  name: astromvp
+  site: 'https://astromvp.com'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: MVPBuilder - Turn Ideas into Products Fast
-    template: '%s — MVPBuilder'
+    default: astromvp - Turn Ideas into Products Fast
+    template: '%s — astromvp'
   description: "We help startups and entrepreneurs build impressive MVPs in weeks, not months. Get to market quickly and start gathering valuable feedback."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: MVPBuilder
+    site_name: astromvp
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@mvpbuilder'
-    site: '@mvpbuilder'
+    handle: '@astromvp'
+    site: '@astromvp'
     cardType: summary_large_image
 
 i18n:

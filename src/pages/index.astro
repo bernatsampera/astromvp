@@ -9,369 +9,203 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero -->
-  <Hero
-    title="Turn your idea into a product. Fast."
-    subtitle="We help startups and entrepreneurs build impressive MVPs in weeks, not months. Get to market quickly and start gathering valuable feedback."
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Book a Free Consultation',
-        href: '/contact',
-      },
-      {
-        variant: 'secondary',
-        text: 'See Our Work',
-        href: '#projects',
-      },
-    ]}
-  />
-  
-  <!-- Services Section -->
-  <section id="services" class="py-20 bg-base-100">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold mb-4">Our MVP Services</h2>
-        <p class="text-lg max-w-3xl mx-auto">We provide end-to-end services to take your idea from concept to working product quickly.</p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="card bg-base-200 shadow-md">
-          <div class="card-body">
-            <h3 class="card-title">Discovery & Strategy</h3>
-            <p>We work with you to define your MVP scope, features, and roadmap to ensure we build exactly what you need.</p>
-            <div class="card-actions justify-end mt-4">
-              <Button 
-                variant="primary" 
-                text="Learn More" 
-                href="#"
-                outline={true}
-                size="sm"
-              />
-            </div>
-          </div>
-        </div>
-        
-        <div class="card bg-base-200 shadow-md">
-          <div class="card-body">
-            <h3 class="card-title">Design & Development</h3>
-            <p>Our team designs and builds your MVP using modern technologies, focusing on speed and quality.</p>
-            <div class="card-actions justify-end mt-4">
-              <Button 
-                variant="primary" 
-                text="Learn More" 
-                href="#"
-                outline={true}
-                size="sm"
-              />
-            </div>
-          </div>
-        </div>
-        
-        <div class="card bg-base-200 shadow-md">
-          <div class="card-body">
-            <h3 class="card-title">Launch & Scale</h3>
-            <p>We help you launch your MVP, gather user feedback, and iterate quickly to improve your product.</p>
-            <div class="card-actions justify-end mt-4">
-              <Button 
-                variant="primary" 
-                text="Learn More" 
-                href="#"
-                outline={true}
-                size="sm"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- How It Works Section -->
-  <section id="how-it-works" class="py-20 bg-base-200">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold mb-4">How We Build Your MVP</h2>
-        <p class="text-lg max-w-3xl mx-auto">Our streamlined process gets you from idea to launch in weeks.</p>
-      </div>
-      
-      <ul class="steps steps-vertical lg:steps-horizontal w-full">
-        <li class="step step-primary">
-          <div class="mt-8">
-            <h3 class="font-bold mb-2">Discovery</h3>
-            <p class="text-sm max-w-xs">We explore your idea and define the core requirements</p>
-          </div>
-        </li>
-        <li class="step step-primary">
-          <div class="mt-8">
-            <h3 class="font-bold mb-2">Design</h3>
-            <p class="text-sm max-w-xs">We create wireframes and visual designs for your MVP</p>
-          </div>
-        </li>
-        <li class="step step-primary">
-          <div class="mt-8">
-            <h3 class="font-bold mb-2">Development</h3>
-            <p class="text-sm max-w-xs">We build your MVP with focus on core functionality</p>
-          </div>
-        </li>
-        <li class="step">
-          <div class="mt-8">
-            <h3 class="font-bold mb-2">Launch</h3>
-            <p class="text-sm max-w-xs">We deploy your MVP and help you gather initial feedback</p>
-          </div>
-        </li>
-      </ul>
-      
-      <div class="flex justify-center mt-12">
+  <!-- Full-Screen Hero Section -->
+  <section class="min-h-screen flex items-center justify-center bg-base-100 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">Turn your idea into a product. Fast.</h1>
+      <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-12 text-dark-gray">
+        We help startups and entrepreneurs build impressive MVPs in weeks, not months. Get to market quickly and start gathering valuable feedback.
+      </p>
+      <div class="flex flex-wrap gap-6 justify-center">
         <Button
           variant="primary"
-          text="Schedule a Call"
+          text="Book a Free Consultation"
           href="/contact"
+          class="px-8 py-3 text-base-100 font-medium"
+        />
+        <Button
+          variant="secondary"
+          text="See Our Work"
+          href="#projects"
+          outline={true}
+          class="px-8 py-3 font-medium"
         />
       </div>
     </div>
   </section>
   
-  <!-- Pricing Section -->
-  <section id="pricing" class="py-20 bg-base-100">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
-        <p class="text-lg max-w-3xl mx-auto">Choose the package that fits your needs and budget.</p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Starter Package -->
-        <div class="card bg-base-200 shadow-md">
-          <div class="card-body">
-            <h3 class="card-title text-xl">Starter MVP</h3>
-            <div class="my-4">
-              <span class="text-4xl font-bold">$4,999</span>
-            </div>
-            <p class="mb-6">Perfect for testing a simple idea quickly</p>
-            
-            <ul class="space-y-2 mb-8">
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                Single-page application
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                3-5 core features
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                Basic authentication
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                2 weeks delivery
-              </li>
-            </ul>
-            
-            <div class="card-actions">
-              <Button
-                variant="primary"
-                text="Get Started"
-                href="/contact"
-                class="w-full"
-              />
-            </div>
-          </div>
-        </div>
-        
-        <!-- Growth Package -->
-        <div class="card bg-primary text-primary-content shadow-xl">
-          <div class="card-body">
-            <div class="badge badge-secondary mb-2">POPULAR</div>
-            <h3 class="card-title text-xl">Growth MVP</h3>
-            <div class="my-4">
-              <span class="text-4xl font-bold">$9,999</span>
-            </div>
-            <p class="mb-6">Ideal for most startup ideas</p>
-            
-            <ul class="space-y-2 mb-8">
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                Multi-page application
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                5-8 core features
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                User authentication & profiles
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                Payment integration
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                4 weeks delivery
-              </li>
-            </ul>
-            
-            <div class="card-actions">
-              <Button
-                variant="secondary"
-                text="Get Started"
-                href="/contact"
-                class="w-full"
-              />
-            </div>
-          </div>
-        </div>
-        
-        <!-- Premium Package -->
-        <div class="card bg-base-200 shadow-md">
-          <div class="card-body">
-            <h3 class="card-title text-xl">Custom MVP</h3>
-            <div class="my-4">
-              <span class="text-4xl font-bold">Contact Us</span>
-            </div>
-            <p class="mb-6">For complex applications with specific needs</p>
-            
-            <ul class="space-y-2 mb-8">
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                Custom application architecture
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                Unlimited features
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                Advanced integrations
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                Dedicated development team
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                Custom timeline
-              </li>
-            </ul>
-            
-            <div class="card-actions">
-              <Button
-                variant="primary"
-                text="Contact Us"
-                href="/contact"
-                class="w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
   <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-base-200">
+  <section id="projects" class="py-34 bg-base-200">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold mb-4">Our Recent MVPs</h2>
-        <p class="text-lg max-w-3xl mx-auto">See examples of successful MVPs we've built for our clients.</p>
+        <h2 class="text-4xl font-bold mb-6">Our Recent Projects</h2>
+        <p class="text-xl max-w-2xl mx-auto text-dark-gray">Explore the innovative MVPs we've built for our clients.</p>
       </div>
       
-      <div class="grid md:grid-cols-2 gap-10">
+      <div class="grid md:grid-cols-2 gap-12">
         <!-- Project 1 -->
-        <div class="card bg-base-100 shadow-md">
-          <figure>
-            <div class="aspect-video bg-base-300"></div>
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title text-xl">HealthTrack</h3>
-            <p class="mb-4">A fitness tracking application that helps users monitor their workouts, nutrition, and progress.</p>
-            <div class="card-actions justify-end">
-              <Button
-                variant="primary"
-                text="View Case Study"
-                href="#"
-                outline={true}
-                size="sm"
-              />
-            </div>
+        <div class="group">
+          <div class="relative aspect-video bg-base-300 overflow-hidden mb-6 rounded-md">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
           </div>
+          <h3 class="text-2xl font-bold mb-3">HealthTrack</h3>
+          <p class="text-dark-gray mb-4">A fitness tracking application that helps users monitor their workouts, nutrition, and progress.</p>
+          <a href="#" class="inline-flex items-center font-medium text-primary">
+            View
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
         </div>
         
         <!-- Project 2 -->
-        <div class="card bg-base-100 shadow-md">
-          <figure>
-            <div class="aspect-video bg-base-300"></div>
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title text-xl">TaskFlow</h3>
-            <p class="mb-4">A project management tool designed for small teams to streamline their workflow and collaboration.</p>
-            <div class="card-actions justify-end">
-              <Button
-                variant="primary"
-                text="View Case Study"
-                href="#"
-                outline={true}
-                size="sm"
-              />
-            </div>
+        <div class="group">
+          <div class="relative aspect-video bg-base-300 overflow-hidden mb-6 rounded-md">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
           </div>
+          <h3 class="text-2xl font-bold mb-3">TaskFlow</h3>
+          <p class="text-dark-gray mb-4">A project management tool designed for small teams to streamline their workflow and collaboration.</p>
+          <a href="#" class="inline-flex items-center font-medium text-primary">
+            View
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
         </div>
       </div>
       
-      <div class="flex justify-center mt-12">
-        <div class="stats shadow">
-          <div class="stat">
-            <div class="stat-figure text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-              </svg>
-            </div>
-            <div class="stat-title">MVPs Launched</div>
-            <div class="stat-value">42</div>
-            <div class="stat-desc">Since 2023</div>
-          </div>
-          
-          <div class="stat">
-            <div class="stat-figure text-secondary">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
-            </div>
-            <div class="stat-title">Happy Clients</div>
-            <div class="stat-value">28</div>
-            <div class="stat-desc">And growing</div>
-          </div>
-          
-          <div class="stat">
-            <div class="stat-figure text-accent">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div class="stat-title">Avg. Delivery Time</div>
-            <div class="stat-value">3.5</div>
-            <div class="stat-desc">Weeks</div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   </section>
   
-  <!-- CTA Section -->
-  <section class="py-20 bg-primary text-primary-content">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-4">Ready to build your MVP?</h2>
-      <p class="text-lg mb-8 max-w-2xl mx-auto">
-        Book a free consultation call today and let's discuss how we can turn your idea into a product.
-      </p>
-      <Button
-        variant="secondary"
-        text="Book Your Free Call"
-        href="/contact"
-        size="lg"
-      />
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-34 bg-base-100">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6">Simple, Transparent Pricing</h2>
+        <p class="text-xl max-w-2xl mx-auto text-dark-gray">Choose the package that fits your needs and budget.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+        <!-- Starter Package -->
+        <div class="p-8 bg-base-200 rounded-lg hover:shadow-md transition-all duration-300">
+          <h3 class="text-2xl font-bold mb-2">Starter MVP</h3>
+          <p class="text-dark-gray mb-6">Perfect for testing a simple idea quickly</p>
+          
+          <div class="mb-8">
+            <div class="text-4xl font-bold mb-1">$4,999</div>
+            <div class="text-dark-gray">One-time fee</div>
+          </div>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Single-page application</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>3-5 core features</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Basic authentication</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>2 weeks delivery</span>
+            </li>
+          </ul>
+          
+          <a href="/contact" class="inline-block w-full py-3 text-center border border-primary text-primary font-medium rounded-md hover:bg-primary hover:text-white transition-colors duration-300">Get Started</a>
+        </div>
+        
+        <!-- Growth Package -->
+        <div class="p-8 bg-base-100 text-black rounded-lg shadow-lg transform md:scale-105">
+          <div class="inline-block px-3 py-1 text-xs bg-primary text-white rounded-full mb-4">POPULAR</div>
+          <h3 class="text-2xl font-bold mb-2">Growth MVP</h3>
+          <p class="text-black mb-6">Ideal for most startup ideas</p>
+          
+          <div class="mb-8">
+            <div class="text-4xl font-bold mb-1">$9,999</div>
+            <div class="text-black">One-time fee</div>
+          </div>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Multi-page application</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>5-8 core features</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>User profiles</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Payment integration</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>4 weeks delivery</span>
+            </li>
+          </ul>
+          
+          <a href="/contact" class="inline-block w-full py-3 text-center bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors duration-300">Get Started</a>
+        </div>
+        
+        <!-- Custom Package -->
+        <div class="p-8 bg-base-200 rounded-lg hover:shadow-md transition-all duration-300">
+          <h3 class="text-2xl font-bold mb-2">Custom MVP</h3>
+          <p class="text-dark-gray mb-6">For complex applications with specific needs</p>
+          
+          <div class="mb-8">
+            <div class="text-4xl font-bold mb-1">Contact Us</div>
+            <div class="text-dark-gray">Custom pricing</div>
+          </div>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Custom application architecture</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Unlimited features</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Advanced integrations</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Dedicated development team</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-3 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Custom timeline</span>
+            </li>
+          </ul>
+          
+          <a href="/contact" class="inline-block w-full py-3 text-center border border-primary text-primary font-medium rounded-md hover:bg-primary hover:text-white transition-colors duration-300">Contact Us</a>
+        </div>
+      </div>
+      
+      <!-- CTA -->
+      <div class="text-center mt-20">
+        <h3 class="text-2xl font-bold mb-4">Ready to build your MVP?</h3>
+        <p class="text-xl mb-8 max-w-2xl mx-auto text-dark-gray">
+          Book a free consultation call today and let's discuss how we can turn your idea into a product.
+        </p>
+        <Button
+          variant="primary"
+          text="Book Your Free Call"
+          href="/contact"
+          class="px-8 py-3 text-base-100 font-medium"
+        />
+      </div>
     </div>
   </section>
 </Layout>
