@@ -1,0 +1,330 @@
+{
+  "name": "Fyodor Dostoyevsky",
+  "entries": [
+    {
+      "year": 1821,
+      "event": "Born on November 11th in Moscow, Russia",
+      "type": "event"
+    },
+    {
+      "year": 1821,
+      "event": "Born",
+      "type": "event"
+    },
+    {
+      "year": 1821,
+      "event": "Fyodor Mikhailovich Dostoevsky was born on November 11th (Old Style) or January 23rd (New Style), in Moscow, Russia",
+      "type": "event"
+    },
+    {
+      "year": "1821",
+      "event": "Born",
+      "type": "birth"
+    },
+    {
+      "year": 1830,
+      "event": "He knew the Gospel from a very young age.",
+      "type": "event"
+    },
+    {
+      "year": 1831,
+      "event": "Purchased estate in the Kashirsky District of the Tula Governorate",
+      "type": "event"
+    },
+    {
+      "year": 1833,
+      "event": "Sent to a French boarding school and then to the Chermak boarding school",
+      "type": "event"
+    },
+    {
+      "year": 1837,
+      "event": "Mother died",
+      "type": "event"
+    },
+    {
+      "year": 1837,
+      "event": "His most cherished childhood memories were reciting prayers in front of guests and reading passages from the Book of Job that impressed him while 'still almost a child'.",
+      "type": "event"
+    },
+    {
+      "year": 1837,
+      "event": "Dostoyevsky's father Fyodor was imprisoned for two years due to his involvement with a radical group",
+      "type": "event"
+    },
+    {
+      "year": 1839,
+      "event": "Attended the University of Saint Petersburg to study law and philosophy",
+      "type": "event"
+    },
+    {
+      "year": 1839,
+      "event": "Father's death on 16 June 1839",
+      "type": "event"
+    },
+    {
+      "year": 1840,
+      "event": "First known affair with Avdotya Panaeva",
+      "type": "event"
+    },
+    {
+      "year": 1841,
+      "event": "He attended Sunday liturgies from an early age.",
+      "type": "event"
+    },
+    {
+      "year": 1843,
+      "event": "Took a job as a lieutenant engineer on 12 August 1843",
+      "type": "event"
+    },
+    {
+      "year": 1843,
+      "event": "Published first literary work in journal Repertoire and Pantheon",
+      "type": "event"
+    },
+    {
+      "year": 1844,
+      "event": "Dostoevsky graduated from the Saint Petersburg Engineering Academy and began working as an engineer",
+      "type": "event"
+    },
+    {
+      "year": 1845,
+      "event": "Completed first novel 'Poor Folk'",
+      "type": "event"
+    },
+    {
+      "year": 1846,
+      "event": "First novel published",
+      "type": "event"
+    },
+    {
+      "year": 1846,
+      "event": "joined the utopian socialist Beketov circle",
+      "type": "event"
+    },
+    {
+      "year": 1846,
+      "event": "joined the Petrashevsky Circle, a social reform group",
+      "type": "event"
+    },
+    {
+      "year": 1848,
+      "event": "secret revolutionary society within the circle was created by Nikolay Speshnev",
+      "type": "event"
+    },
+    {
+      "year": 1849,
+      "event": "Arrested for participating in a revolutionary society and sentenced to death",
+      "type": "event"
+    },
+    {
+      "year": 1849,
+      "event": "Arrested for belonging to the Petrashevsky Circle",
+      "type": "event"
+    },
+    {
+      "year": 1849,
+      "event": "first parts of 'Netochka Nezvanova' were published",
+      "type": "event"
+    },
+    {
+      "year": 1849,
+      "event": "joined the vsky Circle",
+      "type": "event"
+    },
+    {
+      "year": 1850,
+      "event": "Committed to death, but sentence commuted",
+      "type": "event"
+    },
+    {
+      "year": 1850,
+      "event": "served four years of exile with hard labour at a katorga prison camp in Omsk, Siberia",
+      "type": "event"
+    },
+    {
+      "year": 1850,
+      "event": "Epilepsy",
+      "type": "event"
+    },
+    {
+      "year": 1854,
+      "event": "Released from prison after serving three years of his sentence",
+      "type": "event"
+    },
+    {
+      "year": 1854,
+      "event": "Released from Siberian prison camp after four years",
+      "type": "event"
+    },
+    {
+      "year": 1854,
+      "event": "released from prison on 14 February",
+      "type": "event"
+    },
+    {
+      "year": 1854,
+      "event": "moved to Semipalatinsk around mid-March",
+      "type": "event"
+    },
+    {
+      "year": 1856,
+      "event": "Sent a letter through Wrangel to General Eduard Totleben, leading to being granted the right to publish books and marry",
+      "type": "event"
+    },
+    {
+      "year": 1857,
+      "event": "Married Maria Dmitrievna Isaeva in Kuznetsk on February 7th",
+      "type": "event"
+    },
+    {
+      "year": 1857,
+      "event": "He took part in annual pilgrimages to the St. Sergius Trinity Monastery.",
+      "type": "event"
+    },
+    {
+      "year": 1858,
+      "event": "Romance with comic actress Aleksandra Ivanovna Schubert",
+      "type": "event"
+    },
+    {
+      "year": 1859,
+      "event": "Released from military service due to deteriorating health and granted permission to return to European Russia, first to Tver and then to St Petersburg",
+      "type": "event"
+    },
+    {
+      "year": 1864,
+      "event": "Affair with Russian-born woman Martha Brown (née Elizaveta Andreyevna Chlebnikova)",
+      "type": "event"
+    },
+    {
+      "year": 1864,
+      "event": "Mock execution",
+      "type": "event"
+    },
+    {
+      "year": 1865,
+      "event": "Completed A Writer's Diary, a collection of his writings",
+      "type": "event"
+    },
+    {
+      "year": 1865,
+      "event": "Met Anna Korvin-Krukovskaya",
+      "type": "event"
+    },
+    {
+      "year": 1866,
+      "event": "A deacon at the hospital gave him religious instruction.",
+      "type": "event"
+    },
+    {
+      "year": 1866,
+      "event": "t",
+      "type": "event"
+    },
+    {
+      "year": 1867,
+      "event": "Married Anna Grigorievna Snitkina",
+      "type": "event"
+    },
+    {
+      "year": 1867,
+      "event": "February 15: Married Anna Snitkina in Trinity Cathedral, Saint Petersburg",
+      "type": "event"
+    },
+    {
+      "year": 1867,
+      "event": "April 14: Began delayed honeymoon in Germany with the money gained from the sale of his book Crime and Punishment",
+      "type": "event"
+    },
+    {
+      "year": 1868,
+      "event": "Anna's death in childbirth",
+      "type": "event"
+    },
+    {
+      "year": 1868,
+      "event": "Wrote the first 100 pages of The Idiot in 23 days",
+      "type": "event"
+    },
+    {
+      "year": 1868,
+      "event": "Fyodor Dostoyevsky's daughter Sofya was born in Geneva",
+      "type": "event"
+    },
+    {
+      "year": 1868,
+      "event": "Sofya died of pneumonia three months after birth",
+      "type": "event"
+    },
+    {
+      "year": 1871,
+      "event": "Divorced his second wife, Maria Isayeva",
+      "type": "event"
+    },
+    {
+      "year": 1873,
+      "event": "January: The 'Dostoevsky Publishing Company' was founded with Anna's help",
+      "type": "event"
+    },
+    {
+      "year": 1873,
+      "event": "Anna returns to Staraya Russa with the children, while Dostoyevsky stays in St Petersburg",
+      "type": "event"
+    },
+    {
+      "year": 1873,
+      "event": "June 11: Dostoyevsky is taken to court for citing Prince Meshchersky's words without permission",
+      "type": "event"
+    },
+    {
+      "year": 1874,
+      "event": "March 23: Dostoyevsky is taken to court again for violating copyright laws",
+      "type": "event"
+    },
+    {
+      "year": 1874,
+      "event": "Dostoyevsky leaves The Citizen due to stressful work and interference from the Russian bureaucracy in March",
+      "type": "event"
+    },
+    {
+      "year": 1875,
+      "event": "August 10: Alexey, Dostoyevsky's son, is born in Staraya Russa",
+      "type": "event"
+    },
+    {
+      "year": 1876,
+      "event": "Dostoevsky continues work on his Diary and receives many letters from readers",
+      "type": "event"
+    },
+    {
+      "year": 1877,
+      "event": "Four epileptic seizures",
+      "type": "event"
+    },
+    {
+      "year": 1877,
+      "event": "Russo-Turkish War began",
+      "type": "event"
+    },
+    {
+      "year": 1879,
+      "event": "Received an honorary certificate from the Russian Academy of Sciences",
+      "type": "event"
+    },
+    {
+      "year": 1879,
+      "event": "Diagnosed with early-stage pulmonary emphysema",
+      "type": "event"
+    },
+    {
+      "year": 1881,
+      "event": "Died due to complications from a heart attack at the age of 59",
+      "type": "event"
+    },
+    {
+      "year": "1881",
+      "event": "Died",
+      "type": "death"
+    }
+  ]
+}

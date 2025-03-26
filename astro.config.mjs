@@ -1,7 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
@@ -18,6 +18,8 @@ import {
   lazyImagesRehypePlugin,
 } from './src/utils/frontmatter.mjs';
 
+import react from '@astrojs/react';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -27,57 +29,42 @@ const whenExternalScripts = (items = []) =>
 export default defineConfig({
   output: 'static',
 
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    sitemap(),
-    mdx(),
-    icon({
-      include: {
-        tabler: ['*'],
-        'flat-color-icons': [
-          'template',
-          'gallery',
-          'approval',
-          'document',
-          'advertising',
-          'currency-exchange',
-          'voice-presentation',
-          'business-contact',
-          'database',
-        ],
+  integrations: [tailwind({
+    applyBaseStyles: false,
+  }), sitemap(), mdx(), icon({
+    include: {
+      tabler: ['*'],
+      'flat-color-icons': [
+        'template',
+        'gallery',
+        'approval',
+        'document',
+        'advertising',
+        'currency-exchange',
+        'voice-presentation',
+        'business-contact',
+        'database',
+      ],
+    },
+  }), ...whenExternalScripts(() =>
+    partytown({
+      config: { forward: ['dataLayer.push'] },
+    })
+  ), compress({
+    CSS: true,
+    HTML: {
+      'html-minifier-terser': {
+        removeAttributeQuotes: false,
       },
-    }),
+    },
+    Image: false,
+    JavaScript: true,
+    SVG: false,
+    Logger: 1,
+  }), astromvp({
+    config: './src/config.yaml',
+  }), react()],
 
-    ...whenExternalScripts(() =>
-      partytown({
-        config: { forward: ['dataLayer.push'] },
-      })
-    ),
-
-    compress({
-      CSS: true,
-      HTML: {
-        'html-minifier-terser': {
-          removeAttributeQuotes: false,
-        },
-      },
-      Image: false,
-      JavaScript: true,
-      SVG: false,
-      Logger: 1,
-    }),
-
-    astromvp({
-      config: './src/config.yaml',
-    }),
-  ],
-
-  image: {
-    service: squooshImageService(),
-    domains: ['cdn.pixabay.com'],
-  },
 
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
