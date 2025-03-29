@@ -148,6 +148,11 @@
     is-wsl "^3.1.0"
     which-pm-runs "^1.1.0"
 
+"@astrolib/seo@^1.0.0-beta.8":
+  version "1.0.0-beta.8"
+  resolved "https://registry.npmjs.org/@astrolib/seo/-/seo-1.0.0-beta.8.tgz"
+  integrity sha512-SpNycspjcjnz6um4Vph0k+SAKgUib7/8qJRCaaahJD1UfLuXKK7E+bmKbnv8QPBTRPZkQW6zFVaZRl5VvnyDfg==
+
 "@babel/code-frame@^7.26.2":
   version "7.26.2"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.26.2.tgz"
@@ -1151,7 +1156,7 @@ astro-icon@^1.1.0:
     "@iconify/types" "^2.0.0"
     "@iconify/utils" "^2.1.5"
 
-astro@*, "astro@^3.0.0 || ^4.0.0 || ^5.0.0", astro@^5.0.0, astro@^5.5.5:
+astro@*, "astro@^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-beta.0 || ^5.0.0", "astro@^3.0.0 || ^4.0.0 || ^5.0.0", astro@^5.0.0, astro@^5.5.5:
   version "5.5.5"
   resolved "https://registry.npmjs.org/astro/-/astro-5.5.5.tgz"
   integrity sha512-fdnnK5dhWNIQT/cXzvaGs9il4T5noi4jafobdntbuNOrRxI1JnOxDfrtBadUo6cknCRCFhYrXh4VndCqj1a4Sg==

@@ -8,8 +8,6 @@ import Favicons from '~/components/Favicons.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 
-import {ViewTransitions} from 'astro:transitions';
-
 import type {MetaData as MetaDataType} from '~/types';
 
 export interface Props {
@@ -26,15 +24,60 @@ const {language, textDirection} = I18N;
     <CommonMeta />
     <Favicons />
     <Metadata {...metadata} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <ViewTransitions fallback="swap" />
-    
     <style is:global>
+
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('/fonts/ppneuemontreal-thin.otf') format('opentype');
+      font-weight: 100;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('/fonts/ppneuemontreal-book.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('/fonts/ppneuemontreal-italic.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('/fonts/ppneuemontreal-medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('/fonts/ppneuemontreal-bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('/fonts/ppneuemontreal-semibolditalic.otf') format('opentype');
+      font-weight: 600;
+      font-style: italic;
+      font-display: swap;
+    }
+
       html {
-        font-family: 'Inter', sans-serif;
+        font-family: 'PP Neue Montreal', sans-serif;
         scroll-behavior: smooth;
       }
       
